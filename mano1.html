@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights Bakery</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background: url('bakery-interior.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 1rem;
+            position: relative; /* Needed for dropdown */
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        /* Dropdown Menu */
+        header nav ul li.dropdown:hover .dropdown-menu {
+            display: block; /* Show dropdown on hover */
+        }
+
+        .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%; /* Position the dropdown below the parent */
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            width: 200px; /* Adjust width */
+            padding: 1rem 0;
+            list-style: none;
+            margin: 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown-menu li a {
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #ff6f61;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: rgba(0, 0, 0, 0.5);
+            height: 100vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero a {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #ff6f61;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .features ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .features ul li {
+            margin: 1rem;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            flex: 1 1 calc(33.333% - 2rem);
+            max-width: calc(33.333% - 2rem);
+            box-sizing: border-box;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .features ul li {
+                flex: 1 1 calc(50% - 2rem);
+                max-width: calc(50% - 2rem);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .features ul li {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">🍞 Sweet Delights Bakery 🍪</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Our Baked Goods</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Bread</a></li>
+                        <li><a href="#">Cakes</a></li>
+                        <li><a href="#">Pastries</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#order">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Sweet Delights Bakery</h1>
+        <p>Discover our freshly baked bread, cakes, pastries, and more!</p>
+        <a href="#features">Explore Our Menu</a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Our Bestsellers</h2>
+        <ul>
+            <li>Freshly Baked Artisan Bread</li>
+            <li>Delicious Chocolate Cakes</li>
+            <li>Butter Croissants & Pastries</li>
+            <li>Custom Wedding Cakes</li>
+            <li>Gourmet Cupcakes</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sweet Delights Bakery. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
